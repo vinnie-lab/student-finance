@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Student Finance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="dashboard.html">Admin<span>Panel</span></a>
+            <button class="sidebar-close" id="sidebar-close">×</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="/pages/dashboard.html"><i data-lucide="home"></i> Dashboard</a></li>
+            <li><a href="/pages/students.html"><i data-lucide="users"></i> Students</a></li>
+            <li><a href="/pages/invoices.html" class="active"><i data-lucide="file-text"></i> Invoices</a></li>
+            <li><a href="/pages/payments.html" ><i data-lucide="credit-card"></i> Payments</a></li>
+            <li><a href="/pages/reports.html"><i data-lucide="bar-chart-2"></i> Reports</a></li>
+            <li><a href="/pages/settings.html"><i data-lucide="settings"></i> Settings</a></li>
+            <li><a href="/pages/settings.html" ><i data-lucide="log-out"></i> Logout</a></li>
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Your School</p></div>
+    </aside>
+
+    <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+             <div class="header-left">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <h1>Financial Invoices</h1>
+            </div>
+            <div class="user-profile">
+                
+                <div class="user-profile"><span>Vincent Admin</span><div class="user-profile-img">
+                <img src="/pages/img/profile.png"  height="40px"width='40px' srcset="" style="border-radius: 50%;">
+            </div></div>
+            </div>
+        </header>
+
+        <main class="page-content">
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h2>All Invoices</h2>
+                    <button class="btn btn-primary">[+] Create New Invoice</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Invoice ID</th>
+                            <th>Student Name</th>
+                            <th>Amount</th>
+                            <th>Issue Date</th>
+                            <th>Due Date</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>INV-2024-0982</td>
+                            <td>Jane Doe</td>
+                            <td>$1,500.00</td>
+                            <td>2024-10-15</td>
+                            <td>2024-10-31</td>
+                            <td><span class="status-badge status-paid">Paid</span></td>
+                            <td><a href="#" class="btn btn-secondary btn-sm">View</a></td>
+                        </tr>
+                        <tr>
+                            <td>INV-2024-0981</td>
+                            <td>John Smith</td>
+                            <td>$750.00</td>
+                            <td>2024-10-10</td>
+                            <td>2024-10-25</td>
+                            <td><span class="status-badge status-unpaid">Unpaid</span></td>
+                            <td><a href="#" class="btn btn-secondary btn-sm">Send Reminder</a></td>
+                        </tr>
+                         <tr>
+                            <td>INV-2024-0980</td>
+                            <td>Emily White</td>
+                            <td>$320.00</td>
+                            <td>2024-09-01</td>
+                            <td>2024-09-15</td>
+                            <td><span class="status-badge status-overdue">Overdue</span></td>
+                            <td><a href="#" class="btn btn-secondary btn-sm">View</a></td>
+                        </tr>
+                        <!-- More invoices... -->
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+    lucide.createIcons();
+    </script>
+</body>
+</html>

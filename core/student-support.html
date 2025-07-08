@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Student Portal</title>
+    <link rel="stylesheet" href="/pages/css/style.css">
+    <!-- Inline styles for form elements, could be moved to CSS file -->
+    <style>
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; }
+        .form-group input, .form-group select, .form-group textarea {
+            width: 100%; padding: 12px; border: 1px solid var(--gray-200); border-radius: 6px;
+            background-color: var(--gray-50); font-size: 1rem; font-family: 'Inter', sans-serif;
+        }
+        .form-group textarea { resize: vertical; min-height: 120px; }
+    </style>
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <!-- (Copy sidebar from dashboard, change active class) -->
+        <div class="sidebar-header"><a href="home.html">Student<span>Portal</span></a><button class="sidebar-close" id="sidebar-close">×</button></div>
+        <ul class="sidebar-nav">
+            <li><a href="student-support.html" class="active"> Support Inquiries</a></li>
+            <!-- ... other links -->
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Your University</p></div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left"><button class="menu-toggle" id="menu-toggle">☰</button><h1>Support Inquiries</h1></div>
+            <div class="user-profile"><span>Jane Doe</span><div class="user-profile-img">JD</div></div>
+        </header>
+
+        <main class="page-content">
+            <div class="page-grid">
+                <div class="card">
+                    <h2>Submit a New Inquiry</h2>
+                    <form style="margin-top: 24px;">
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <select id="category">
+                                <option>Billing & Fees</option>
+                                <option>Scholarship Question</option>
+                                <option>Payment Issue</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="e.g., Question about my fall invoice">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Please describe your issue in detail..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit Ticket</button>
+                    </form>
+                </div>
+                <div class="card">
+                    <h2>My Open Tickets</h2>
+                    <div style="overflow-x: auto;">
+                        <table class="data-table">
+                            <thead><tr><th>Ticket ID</th><th>Subject</th><th>Status</th></tr></thead>
+                            <tbody>
+                                <tr>
+                                    <td>#78341</td>
+                                    <td>Wrong library fine</td>
+                                    <td><span class="status-badge status-overdue">Awaiting Reply</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/pages/js/script.js"></script>
+</body>
+</html>

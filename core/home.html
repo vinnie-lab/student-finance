@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Student Portal</title>
+    <link rel="stylesheet" href="/pages/css/style.css"> <!-- Reusing the SAME stylesheet -->
+</head>
+<body class="sidebar-collapsed">
+    <!-- STUDENT SIDEBAR -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="home.html">Student<span>Portal</span></a>
+            <button class="sidebar-close" id="sidebar-close">×</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href=home.html" class="active"> Dashboard & Fees</a></li>
+            <li><a href="scholarships.html"> Scholarships & Aid</a></li>
+            
+            <li><a href="student-history.html"> Transaction History</a></li>
+            <li><a href="student-documents.html"> Documents</a></li>
+            <li><a href="student-support.html"> Support Inquiries</a></li>
+            <li><a href="student-profile.html"> Profile & Settings</a></li>
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Zephyra</p></div>
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <h1>My Financial Overview</h1>
+            </div>
+            <div class="user-profile">
+                <span>Jane Akoth</span>
+                <div class="user-profile-img">JA</div>
+            </div>
+        </header>
+
+        <main class="page-content">
+            <!-- Key Financial Stats -->
+            <div class="stats-grid">
+                <div class="card">
+                    <h3>Outstanding Balance</h3>
+                    <p style="font-size: 2rem; font-weight: 700; margin-top: 8px; color: var(--error);">KES 2,550.00</p>
+                </div>
+                <div class="card">
+                    <h3>Next Payment Due</h3>
+                    <p style="font-size: 2rem; font-weight: 700; margin-top: 8px;">Auh 15, 2025</p>
+                </div>
+                <div class="card">
+                    <h3>Financial Aid Status</h3>
+                    <p style="font-size: 2rem; font-weight: 700; margin-top: 8px; color: var(--success);">Approved</p>
+                </div>
+            </div>
+
+            <!-- Current Invoice / Payment Card -->
+            <div class="card" style="margin-top: 40px;">
+                <h2>Current Invoice: Fall 2024 Tuition</h2>
+                <div style="border-top: 1px solid var(--gray-200); margin-top: 16px; padding-top: 16px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 8px;">
+                        <span>Tuition & Fees:</span>
+                        <strong>KES 2,500.00</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 16px;">
+                        <span>Library Fine:</span>
+                        <strong>KES 50.00</strong>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; padding-top: 16px; border-top: 1px solid var(--gray-200); font-size: var(--font-size-h2);">
+                        <strong>Total Due:</strong>
+                        <strong style="color: var(--primary-blue);">KES 2,550.00</strong>
+                    </div>
+                </div>
+                <div style="margin-top: 24px; display: flex; gap: 16px;">
+                    <button class="btn btn-primary">💳 Make a Payment</button>
+                    <a href="#" class="btn btn-secondary">⭳ Download Invoice</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="/pages/js/script.js"></script> <!-- Reusing the SAME script -->
+</body>
+</html>

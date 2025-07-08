@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documents - Student Portal</title>
+    <link rel="stylesheet" href="/pages/css/style.css">
+    <!-- Inline styles for form elements for simplicity -->
+    <style>
+        .form-group { margin-bottom: 20px; }
+        .form-group label { display: block; font-weight: 600; margin-bottom: 8px; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid var(--gray-200); border-radius: 6px; background-color: var(--gray-50); font-size: 1rem; }
+    </style>
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <!-- (Copy sidebar, change active class) -->
+        <div class="sidebar-header"><a href="home.html">Student<span>Portal</span></a><button class="sidebar-close" id="sidebar-close">×</button></div>
+        <ul class="sidebar-nav">
+            <li><a href="student-documents.html" class="active">Documents</a></li>
+            <!-- ... other links -->
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Zephyra</p></div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left"><button class="menu-toggle" id="menu-toggle">☰</button><h1>My Documents</h1></div>
+            <div class="user-profile"><span>Jane Akoth</span><div class="user-profile-img">JA</div></div>
+        </header>
+
+        <main class="page-content">
+            <div class="page-grid">
+                <!-- Download Section -->
+                <div class="card">
+                    <h2>Download Documents</h2>
+                    <table class="data-table">
+                        <thead><tr><th>Document Name</th><th>Action</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>Financial Statement 2024</td>
+                                <td><a href="#" class="btn btn-secondary btn-sm">⭳ Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Fee Structure</td>
+                                <td><a href="#" class="btn btn-secondary btn-sm">⭳Download</a></td>
+                            </tr>
+                            <tr>
+                                <td>Sponsorship Confirmation Letter</td>
+                                <td><a href="#" class="btn btn-secondary btn-sm">⭳ Download</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Upload Section -->
+                <div class="card">
+                    <h2>Upload a Document</h2>
+                    <form style="margin-top: 24px;">
+                        <div class="form-group">
+                            <label for="doc-type">Document Type</label>
+                            <select id="doc-type">
+                                <option>Income Verification</option>
+                                <option>Sponsorship Agreement</option>
+                                <option>Financial Aid Appeal Form</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="doc-file">Select File (PDF, PNG, JPG)</label>
+                            <input type="file" id="doc-file">
+                        </div>
+                        <button type="submit" class="btn btn-primary">↑ Submit Document</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/pages/js/script.js"></script>
+</body>
+</html>

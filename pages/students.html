@@ -1,0 +1,134 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students - Student Finance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="dashboard.html">Admin<span>Panel</span></a>
+            <button class="sidebar-close" id="sidebar-close">×</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="/pages/dashboard.html"><i data-lucide="home"></i> Dashboard</a></li>
+            <li><a href="/pages/students.html" class="active"><i data-lucide="users"></i> Students</a></li>
+            <li><a href="/pages/invoices.html"><i data-lucide="file-text"></i> Invoices</a></li>
+            <li><a href="/pages/payments.html"><i data-lucide="credit-card"></i> Payments</a></li>
+            <li><a href="/pages/reports.html"><i data-lucide="bar-chart-2"></i> Reports</a></li>
+            <li><a href="/pages/settings.html"><i data-lucide="settings"></i> Settings</a></li>
+            <li><a href="/pages/settings.html" ><i data-lucide="log-out"></i> Logout</a></li>
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Your School</p></div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <h1>Student Management</h1>
+            </div>
+            <div class="user-profile"><span>Vincent Admin</span><div class="user-profile-img">
+                <img src="/pages/img/profile.png"  height="40px"width='40px' srcset="" style="border-radius: 50%;">
+            </div></div>
+        </header>
+
+        <main class="page-content">
+            <div class="card">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+                    <h2>All Students</h2>
+                    <button class="btn btn-primary">[+] Add Student</button>
+                </div>
+                 <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <!-- Table content remains the same, with data-* attributes -->
+                         <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Balance</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Use data-* attributes to store info for the modal -->
+                        <tr data-name="Vincent Amonde" data-id="STU-001" data-email="amondevin5@gmail.com" data-course="Computer Science" data-balance="$0.00" data-status="Cleared">
+                            <td>STU-001</td>
+                            <td>Vincent Amonde</td>
+                            <td>amondevin5@gmail.com</td>
+                            <td> KES 0.00</td>
+                            <td><span class="status-badge status-cleared">Cleared</span></td>
+                            <td><a href="#" class="btn btn-secondary btn-sm view-student-btn">View</a></td>
+                        </tr>
+                        <tr data-name="John Amonde" data-id="STU-002" data-email="john.amonde@gmail.com" data-course="Business Admin" data-balance="$750.00" data-status="Pending">
+                            <td>STU-002</td>
+                            <td>John Amonde</td>
+                            <td>john.amonde@gmail.com</td>
+                            <td>KES 750.00</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td><a href="#" class="btn btn-secondary btn-sm view-student-btn">View</a></td>
+                        </tr>
+                         <tr data-name="Peter Amonde" data-id="STU-003" data-email="peter@gmail.com" data-course="Graphic Design" data-balance="$320.00" data-status="Overdue">
+                            <td>STU-003</td>
+                            <td>Peter Amonde</td>
+                            <td>peter@gmail.com</td>
+                            <td>KES 320.00</td>
+                            <td><span class="status-badge status-overdue">Overdue</span></td>
+                            <td><a href="#" class="btn btn-secondary btn-sm view-student-btn">View</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <!-- Student Detail Modal (unchanged) -->
+   <div class="modal-overlay" id="student-modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modal-student-name">Student Details</h2>
+                <button class="modal-close" id="modal-close">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="info-grid">
+                    <div class="info-item">
+                        <label>Student ID</label>
+               a         <span id="modal-student-id"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Email Address</label>
+                        <span id="modal-student-email"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Course / Program</label>
+                        <span id="modal-student-course"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Current Balance</label>
+                        <span id="modal-student-balance" style="font-weight: 700;"></span>
+                    </div>
+                    <div class="info-item">
+                        <label>Financial Status</label>
+                        <span id="modal-student-status"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+    lucide.createIcons();
+    </script>
+</body>
+</html>

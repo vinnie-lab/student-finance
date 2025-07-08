@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships - Student Portal</title>
+    <link rel="stylesheet" href="/pages/css/style.css">
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <!-- (Copy sidebar from dashboard, change active class) -->
+        <div class="sidebar-header"><a href="home.html">Student<span>Portal</span></a><button class="sidebar-close" id="sidebar-close">×</button></div>
+        <ul class="sidebar-nav">
+            <li><a href="home.html"> Dashboard & Fees</a></li>
+            <li><a href="scholarships.html" class="active">Scholarships & Aid</a></li>
+            <!-- ... other links -->
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Zephyra</p></div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left"><button class="menu-toggle" id="menu-toggle">☰</button><h1>Scholarships & Financial Aid</h1></div>
+            <div class="user-profile"><span>Jane Akoth</span><div class="user-profile-img">JA</div></div>
+        </header>
+
+        <main class="page-content">
+            <div class="card" style="margin-bottom: 40px;">
+                <h2>My Applications</h2>
+                <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <thead><tr><th>Aid Name</th><th>Submitted</th><th>Status</th><th>Action</th></tr></thead>
+                        <tbody>
+                            <tr>
+                                <td>Merit Scholarship 2024</td>
+                                <td>2024-09-01</td>
+                                <td><span class="status-badge status-paid">Awarded</span></td>
+                                <td><a href="#" class="btn btn-secondary btn-sm">View Details</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <h2>Available Opportunities</h2>
+            <div class="page-grid" style="margin-top: 24px;">
+                <div class="card">
+                    <h3>STEM Excellence Grant</h3>
+                    <p style="color: var(--text-muted); margin-top: 8px;">For students in Science, Technology, Engineering, or Math with a GPA of 3.5 or higher.</p>
+                    <button class="btn btn-primary" style="margin-top: 24px;">Apply Now</button>
+                </div>
+                <div class="card">
+                    <h3>Community Leadership Bursary</h3>
+                    <p style="color: var(--text-muted); margin-top: 8px;">Awarded to students who demonstrate strong leadership and volunteer experience in their community.</p>
+                    <button class="btn btn-primary" style="margin-top: 24px;">Apply Now</button>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/pages/js/script.js"></script>
+</body>
+</html>

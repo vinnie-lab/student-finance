@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments - Student Finance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="dashboard.html">Admin<span>Panel</span></a>
+            <button class="sidebar-close" id="sidebar-close">×</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="/pages/dashboard.html"><i data-lucide="home"></i> Dashboard</a></li>
+            <li><a href="/pages/students.html"><i data-lucide="users"></i> Students</a></li>
+            <li><a href="/pages/invoices.html"><i data-lucide="file-text"></i> Invoices</a></li>
+            <li><a href="/pages/payments.html" class="active"><i data-lucide="credit-card"></i> Payments</a></li>
+            <li><a href="/pages/reports.html"><i data-lucide="bar-chart-2"></i> Reports</a></li>
+            <li><a href="/pages/settings.html"><i data-lucide="settings"></i> Settings</a></li>
+            <li><a href="/pages/settings.html" ><i data-lucide="log-out"></i> Logout</a></li>
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Your School</p></div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <h1>Payment History</h1>
+            </div>
+            <div class="user-profile"><span>Vincent Admin</span><div class="user-profile-img">
+                <img src="/pages/img/profile.png"  height="40px"width='40px' srcset="" style="border-radius: 50%;">
+            </div></div>
+        </header>
+
+        <main class="page-content">
+            <div class="card">
+                <div style="display: flex; justify-content: space-between; align-items: center;">
+                    <h2>All Transactions</h2>
+                    <button class="btn btn-secondary">[⭳] Export CSV</button>
+                </div>
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>Transaction ID</th>
+                            <th>Student Name</th>
+                            <th>Amount Paid</th>
+                            <th>Payment Date</th>
+                            <th>Method</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>TRN-583921</td>
+                            <td>Jane Doe</td>
+                            <td>$1,500.00</td>
+                            <td>2024-10-28</td>
+                            <td>Credit Card</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                        <tr>
+                            <td>TRN-583920</td>
+                            <td>Michael Brown</td>
+                            <td>$500.00</td>
+                            <td>2024-10-27</td>
+                            <td>Bank Transfer</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                         <tr>
+                            <td>TRN-583919</td>
+                            <td>Sarah Lee</td>
+                            <td>$2,000.00</td>
+                            <td>2024-10-27</td>
+                            <td>Credit Card</td>
+                            <td><span class="status-badge status-completed">Completed</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <script src="/pages/js/script.js"></script>
+    <script>
+    lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History - Student Portal</title>
+    <link rel="stylesheet" href="/pages/css/style.css">
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <!-- (Copy sidebar from dashboard, change active class) -->
+        <div class="sidebar-header"><a href="home.html">Student<span>Portal</span></a><button class="sidebar-close" id="sidebar-close">×</button></div>
+        <ul class="sidebar-nav">
+            <li><a href="home.html"> Dashboard & Fees</a></li>
+            <li><a href="scholarships.html"> Scholarships & Aid</a></li>
+           
+            <li><a href="student-history.html" class="active"> Transaction History</a></li>
+            <!-- ... other links -->
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Zephyra</p></div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left"><button class="menu-toggle" id="menu-toggle">☰</button><h1>Transaction History</h1></div>
+            <div class="user-profile"><span>Jane Akoth</span><div class="user-profile-img">JA</div></div>
+        </header>
+
+        <main class="page-content">
+            <div class="card">
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
+                    <h2>All Transactions</h2>
+                    <a href="#" class="btn btn-secondary">⭳ Export as PDF</a>
+                </div>
+                <div style="overflow-x: auto;">
+                    <table class="data-table">
+                        <thead><tr><th>Date</th><th>Description</th><th>Type</th><th>Amount</th></tr></thead>
+                        <tbody>
+                            <tr><td>2024-09-05</td><td>Fall 2024 Tuition Payment</td><td>Payment</td><td style="color: var(--error);">- KES 2,500.00</td></tr>
+                            <tr><td>2024-09-02</td><td>Merit Scholarship Disbursement</td><td>Scholarship</td><td style="color: var(--success);">+ KES 1,000.00</td></tr>
+                            <tr><td>2024-08-20</td><td>Bookstore Purchase</td><td>Charge</td><td style="color: var(--error);">-KES 150.00</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="/pages/js/script.js"></script>
+</body>
+</html>

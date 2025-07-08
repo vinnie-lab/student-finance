@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payments - Student Finance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+     <style>
+        /* Additional styles for forms */
+        .form-group { margin-bottom: 20px; }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid var(--gray-200);
+            border-radius: 6px;
+            background-color: var(--gray-50);
+            font-size: 1rem;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+        }
+    </style>
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="dashboard.html">Admin<span>Panel</span></a>
+            <button class="sidebar-close" id="sidebar-close">×</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="/pages/dashboard.html"><i data-lucide="home"></i> Dashboard</a></li>
+            <li><a href="/pages/students.html"><i data-lucide="users"></i> Students</a></li>
+            <li><a href="/pages/invoices.html"><i data-lucide="file-text"></i> Invoices</a></li>
+            <li><a href="/pages/payments.html"><i data-lucide="credit-card"></i> Payments</a></li>
+            <li><a href="/pages/reports.html"><i data-lucide="bar-chart-2"></i> Reports</a></li>
+            <li><a href="/pages/settings.html" class="active"><i data-lucide="settings"></i> Settings</a></li>
+            <li><a href="/pages/settings.html" ><i data-lucide="log-out"></i> Logout</a></li>
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Your School</p></div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <h1>Settings</h1>
+            </div>
+            <div class="user-profile"><span>Vincent Admin</span><div class="user-profile-img">
+                <img src="/pages/img/profile.png"  height="40px"width='40px' srcset="" style="border-radius: 50%;">
+            </div></div>
+        </header>
+
+        <main class="page-content">
+            <div class="card">
+                <h2>General Settings</h2>
+                <form style="margin-top: 24px;">
+                    <div class="form-group">
+                        <label for="school-name">School Name</label>
+                        <input type="text" id="school-name" value="Your School Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="currency">Currency</label>
+                        <select id="currency">
+                            <option value="USD" selected>USD ($)</option>
+                            <option value="EUR">EUR (€)</option>
+                            <option value="GBP">GBP (£)</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+
+            <div class="card" style="margin-top: 40px;">
+                <h2>Fee Structure</h2>
+                 <form style="margin-top: 24px;">
+                    <div class="form-group">
+                        <label for="late-fee">Late Payment Fee (%)</label>
+                        <input type="number" id="late-fee" value="5">
+                    </div>
+                     <button type="submit" class="btn btn-primary">Save Changes</button>
+                </form>
+            </div>
+        </main>
+    </div>
+    <script src="/js/script.js"></script>
+    <script>
+    lucide.createIcons();
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - Student Finance</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="dashboard.html">Admin<span>Panel</span></a>
+            <button class="sidebar-close" id="sidebar-close">×</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="dashboard.html"><i data-lucide="home"></i> Dashboard</a></li>
+            <li><a href="students.html"><i data-lucide="users"></i> Students</a></li>
+            <li><a href="invoices.html"><i data-lucide="file-text"></i> Invoices</a></li>
+            <li><a href="payments.html" ><i data-lucide="credit-card"></i> Payments</a></li>
+            <li><a href="reports.html" class="active"><i data-lucide="bar-chart-2"></i> Reports</a></li>
+            <li><a href="settings.html"><i data-lucide="settings"></i> Settings</a></li>
+            <li><a href="settings.html" ><i data-lucide="log-out"></i> Logout</a></li>
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Your School</p></div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <h1>Financial Reports</h1>
+            </div>
+           <div class="user-profile"><span>Vincent Admin</span><div class="user-profile-img">
+                <img src="/pages/img/profile.png"  height="40px"width='40px' srcset="" style="border-radius: 50%;">
+            </div></div>
+        </header>
+
+        <main class="page-content">
+            <!-- Use the responsive page-grid for these cards -->
+            <div class="page-grid">
+                 <div class="card">
+                    <h2>Revenue Summary</h2>
+                    <p style="color: var(--text-muted); margin-top: 8px;">Detailed breakdown of all income sources for a selected period.</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 24px;">Generate Report</a>
+                </div>
+                 <div class="card">
+                    <h2>Outstanding Balances</h2>
+                    <p style="color: var(--text-muted); margin-top: 8px;">A list of all students with pending or overdue payments.</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 24px;">Generate Report</a>
+                </div>
+                 <div class="card">
+                    <h2>Payment History</h2>
+                    <p style="color: var(--text-muted); margin-top: 8px;">Complete log of all transactions received within a date range.</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 24px;">Generate Report</a>
+                </div>
+                <div class="card">
+                    <h2>Aging Report</h2>
+                    <p style="color: var(--text-muted); margin-top: 8px;">Categorizes outstanding receivables by age (e.g., 0-30, 31-60 days).</p>
+                    <a href="#" class="btn btn-primary" style="margin-top: 24px;">Generate Report</a>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/script.js"></script>
+    <script>
+    lucide.createIcons();
+    </script>
+</body>
+</html>
