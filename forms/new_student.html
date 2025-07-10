@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Student Finance</title>
+    <link rel="stylesheet" href="../pages/css/style.css">
+    <link rel="stylesheet" href="../pages/css/form.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+</head>
+<body class="sidebar-collapsed">
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <a href="../pages/dashboard.html">Admin<span>Panel</span></a>
+            <button class="sidebar-close" id="sidebar-close">×</button>
+        </div>
+        <ul class="sidebar-nav">
+            <li><a href="../pages/dashboard.html" class="active"><i data-lucide="home"></i> Dashboard</a></li>
+            <li><a href="../pages/students.html"><i data-lucide="users"></i> Students</a></li>
+            <li><a href="../pages/invoices.html"><i data-lucide="file-text"></i> Invoices</a></li>
+            <li><a href="../pages/payments.html" ><i data-lucide="credit-card"></i> Payments</a></li>
+            <li><a href="../pages/scholorships.html"><i data-lucide="graduation-cap"></i> Scholorships</a></li>
+            <li><a href="../pages/reports.html"><i data-lucide="bar-chart-2"></i> Reports</a></li>
+            <li><a href="../pages/settings.html"><i data-lucide="settings"></i> Settings</a></li>
+            <li><a href="" ><i data-lucide="log-out"></i> Logout</a></li>
+        </ul>
+        <div class="sidebar-footer"><p>© 2024 Zephyra</p></div>
+    </aside>
+
+    <div class="main-content">
+        <header class="header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <h1>Dashboard</h1>
+            </div>
+            <div class="user-profile"><span>Vincent Admin</span><div class="user-profile-img">
+                <img src="../pages/img/profile.png"  height="40px"width='40px' srcset="" style="border-radius: 50%;">
+            </div></div>
+        </header>
+
+        <main class="page-content form-container">
+            <div class="">
+                <h1>Student Registration</h1>
+
+                <!-- Progress Stepper -->
+                <div class="progress-stepper">
+                    <div class="step" id="step-1">
+                        <div class="step-icon">1</div>
+                        <div class="step-check">✔</div>
+                        <p>Personal</p>
+                    </div>
+                    <div class="step" id="step-2">
+                        <div class="step-icon">2</div>
+                        <div class="step-check">✔</div>
+                        <p>Parent/Guardian</p>
+                    </div>
+                    <div class="step" id="step-3">
+                        <div class="step-icon">3</div>
+                        <div class="step-check">✔</div>
+                        <p>Academic</p>
+                    </div>
+                    <div class="step" id="step-4">
+                        <div class="step-icon">4</div>
+                        <div class="step-check">✔</div>
+                        <p>Medical</p>
+                    </div>
+                    <div class="step" id="step-5">
+                        <div class="step-icon">5</div>
+                        <div class="step-check">✔</div>
+                        <p>Documents</p>
+                    </div>
+                    <div class="step" id="step-6">
+                        <div class="step-icon">6</div>
+                        <div class="step-check">✔</div>
+                        <p>Finance</p>
+                    </div>
+                    <div class="step" id="step-7">
+                        <div class="step-icon">7</div>
+                        <div class="step-check">✔</div>
+                        <p>Placement</p>
+                    </div>
+                    <div class="step" id="step-8">
+                        <div class="step-icon">8</div>
+                        <div class="step-check">✔</div>
+                        <p>Other</p>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <form id="registrationForm" novalidate>
+                    <!-- SECTION 1: Personal Information -->
+                    <div class="form-section active">
+                        <h2>1. Personal Information</h2>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="fullName">Full Name</label><input type="text" name="fullName" id="fullName" required></div>
+                            <div class="form-group"><label for="dob">Date of Birth</label><input type="date" name="dob" id="dob" required></div>
+                            <div class="form-group"><label for="gender">Gender</label><select name="gender" id="gender" required><option value="">Select...</option><option value="Male">Male</option><option value="Female">Female</option></select></div>
+                            <div class="form-group"><label for="nationality">Nationality</label><input type="text" name="nationality" id="nationality" value="Kenyan" required></div>
+                            <div class="form-group"><label for="county">County</label><input type="text" name="county" id="county" required></div>
+                            <div class="form-group"><label for="birthCert">Birth Certificate No.</label><input type="text" name="birthCert" id="birthCert" required></div>
+                            <div class="form-group full-width"><label for="homeAddress">Home Address (Village, Town)</label><input type="text" name="homeAddress" id="homeAddress" required></div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 2: Parent / Guardian Information -->
+                    <div class="form-section">
+                        <h2>2. Parent / Guardian Information</h2>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="parentName">Parent/Guardian Full Name</label><input type="text" name="parentName" id="parentName" required></div>
+                            <div class="form-group"><label for="relationship">Relationship to Student</label><input type="text" name="relationship" id="relationship" required></div>
+                            <div class="form-group"><label for="parentPhone">Primary Phone Number</label><input type="tel" name="parentPhone" id="parentPhone" required></div>
+                            <div class="form-group"><label for="parentEmail">Email Address</label><input type="email" name="parentEmail" id="parentEmail"></div>
+                            <div class="form-group"><label for="parentId">Parent ID/Passport No.</label><input type="text" name="parentId" id="parentId" required></div>
+                            <div class="form-group"><label for="occupation">Occupation</label><input type="text" name="occupation" id="occupation"></div>
+                            <div class="form-group full-width"><label for="parentAddress">Parent Home Address</label><input type="text" name="parentAddress" id="parentAddress"></div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 3: Academic Background -->
+                    <div class="form-section">
+                        <h2>3. Academic Background</h2>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="primarySchool">Primary School Attended</label><input type="text" name="primarySchool" id="primarySchool" required></div>
+                            <div class="form-group"><label for="kcpeIndex">KCPE Index Number</label><input type="text" name="kcpeIndex" id="kcpeIndex" required></div>
+                            <div class="form-group"><label for="kcpeMarks">KCPE Marks</label><input type="number" name="kcpeMarks" id="kcpeMarks" required></div>
+                            <div class="form-group"><label for="kcpeYear">Year of KCPE Completion</label><input type="number" name="kcpeYear" id="kcpeYear" min="2000" max="2099" step="1" required></div>
+                            <div class="form-group full-width"><label for="transferDetails">Transfer Details (if applicable)</label><textarea name="transferDetails" id="transferDetails" rows="3"></textarea></div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 4: Medical Information -->
+                    <div class="form-section">
+                        <h2>4. Medical Information</h2>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="emergencyContactName">Emergency Contact Name</label><input type="text" name="emergencyContactName" id="emergencyContactName" required></div>
+                            <div class="form-group"><label for="emergencyContactNumber">Emergency Contact Number</label><input type="tel" name="emergencyContactNumber" id="emergencyContactNumber" required></div>
+                            <div class="form-group"><label for="medicalInsurance">Medical Insurance (NHIF No.)</label><input type="text" name="medicalInsurance" id="medicalInsurance"></div>
+                            <div class="form-group"><label for="disability">Disability Status</label><input type="text" name="disability" id="disability" placeholder="None, or specify"></div>
+                            <div class="form-group full-width"><label for="medicalConditions">Known Medical Conditions / Allergies</label><textarea name="medicalConditions" id="medicalConditions" rows="3"></textarea></div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 5: Photograph and Documents -->
+                    <div class="form-section">
+                        <h2>5. Photograph and Documents (Upload)</h2>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="photo">Passport-Sized Photo</label><input type="file" name="photo" id="photo" accept="image/*"></div>
+                            <div class="form-group"><label for="birthCertCopy">Copy of Birth Certificate</label><input type="file" name="birthCertCopy" id="birthCertCopy" accept=".pdf,image/*"></div>
+                            <div class="form-group"><label for="kcpeSlipCopy">Copy of KCPE Results Slip</label><input type="file" name="kcpeSlipCopy" id="kcpeSlipCopy" accept=".pdf,image/*"></div>
+                            <div class="form-group"><label for="parentIDCopy">Copy of Parent/Guardian ID</label><input type="file" name="parentIDCopy" id="parentIDCopy" accept=".pdf,image/*"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- SECTION 6: Finance & Boarding Details -->
+                    <div class="form-section">
+                        <h2>6. Finance & Boarding Details</h2>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="boardingStatus">Boarding Status</label><select name="boardingStatus" id="boardingStatus"><option value="Day">Day Student</option><option value="Boarding">Boarding Student</option></select></div>
+                            <div class="form-group"><label for="scholarship">Scholarship / Bursary</label><input type="text" name="scholarship" id="scholarship" placeholder="None, or specify source"></div>
+                            <div class="form-group"><label for="initialPayment">Initial Fee Payment Amount</label><input type="number" name="initialPayment" id="initialPayment" placeholder="e.g., 25000"></div>
+                            <div class="form-group"><label for="paymentMethod">Payment Method</label><select name="paymentMethod" id="paymentMethod"><option value="Bank Deposit">Bank Deposit</option><option value="M-Pesa">M-Pesa</option><option value="Cheque">Cheque</option></select></div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 7: Program or Class Placement -->
+                    <div class="form-section">
+                        <h2>7. Program or Class Placement</h2>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="formOfAdmission">Form Admitted To</label><select name="formOfAdmission" id="formOfAdmission"><option value="Form 1">Form 1</option><option value="Form 2">Form 2</option><option value="Form 3">Form 3</option><option value="Form 4">Form 4</option></select></div>
+                            <div class="form-group"><label for="streamOfAdmission">Stream / Class Assigned</label><select name="streamOfAdmission" id="streamOfAdmission"><option value="East">East</option><option value="West">West</option><option value="North">North</option><option value="South">South</option></select></div>
+                            <div class="form-group full-width"><label for="electives">Electives Chosen (e.g., French, Music)</label><input type="text" name="electives" id="electives"></div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 8: Other Optional Info -->
+                    <div class="form-section">
+                        <h2>8. Other Optional Information</h2>
+                        <div class="form-grid">
+                            <div class="form-group"><label for="religion">Religious Affiliation</label><input type="text" name="religion" id="religion"></div>
+                            <div class="form-group"><label for="languages">Languages Spoken at Home</label><input type="text" name="languages" id="languages"></div>
+                            <div class="form-group full-width"><label for="clubInterests">Clubs / Sports Interests</label><textarea name="clubInterests" id="clubInterests" rows="3"></textarea></div>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="form-navigation">
+                        <button type="button" id="prevBtn">Previous</button>
+                        <button type="button" id="nextBtn">Next</button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Success Modal -->
+            <div id="successModal" class="modal-overlay">
+                <div class="modal-content">
+                    <span class="modal-close-btn">×</span>
+                    <div class="modal-icon">✅</div>
+                    <h2>Registration Successful!</h2>
+                    <p>The student's data has been recorded.</p>
+                    <p>A JSON file with the submission data has been downloaded.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <script src="../pages/js/script.js"></script>
+    <script>
+        const express = require('express');
+        const fs = require('fs');
+        const path = require('path');
+        const app = express();
+        const PORT = 3000;
+
+        // Middleware to parse incoming JSON data from the form
+        app.use(express.json());
+
+        // --- CHANGED ---
+        // Serve static files (like CSS and JS) from the 'forms' directory
+        app.use(express.static('forms'));
+
+        // --- CHANGED ---
+        // Explicitly define the route for the main page to send your HTML file
+        app.get('/', (req, res) => {
+            res.sendFile(path.join(__dirname, 'forms', 'new_student.html'));
+        });
+
+        // Define the API endpoint to handle form submissions (this part remains the same)
+        app.post('/api/register-student', (req, res) => {
+            const newStudentData = req.body;
+            const filePath = path.join(__dirname, 'data', 'students.json');
+
+            const dataDir = path.join(__dirname, 'data');
+            if (!fs.existsSync(dataDir)) {
+                fs.mkdirSync(dataDir);
+            }
+            
+            fs.readFile(filePath, 'utf8', (err, data) => {
+                let students = [];
+                if (!err && data) {
+                    try {
+                        students = JSON.parse(data);
+                        if (!Array.isArray(students)) {
+                            students = [];
+                        }
+                    } catch (parseErr) {
+                        console.error("Error parsing students.json:", parseErr);
+                        return res.status(500).json({ success: false, message: 'Server error: Could not parse existing data.' });
+                    }
+                }
+
+                students.push(newStudentData);
+
+                fs.writeFile(filePath, JSON.stringify(students, null, 2), (writeErr) => {
+                    if (writeErr) {
+                        console.error("Error writing to students.json:", writeErr);
+                        return res.status(500).json({ success: false, message: 'Server error: Could not save student data.' });
+                    }
+
+                    console.log('Successfully registered student:', newStudentData.admissionNumber);
+                    res.status(200).json({ success: true, message: 'Student registered successfully!' });
+                });
+            });
+        });
+
+        // Start the server
+        app.listen(PORT, () => {
+            console.log(`Server is running at http://localhost:${PORT}`);
+            console.log('Your form should be available at this address.');
+        });
+    </script>
+  
+
+
+</body>
+</html>
