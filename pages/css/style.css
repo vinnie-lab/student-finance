@@ -265,7 +265,7 @@ input:focus{
     width: 10rem;
     border-radius: 50%;
 }
-.info{
+.flex{
     display: flex;
     grid-area: 1rem;
 }
