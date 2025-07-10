@@ -39,21 +39,39 @@
         </header>
 
         <main class="page-content">
-            <div class="stats-grid">
-                <div class="card">
-                    <h3>Total Students</h3>
-                    <p style="font-size: 1.4rem; font-weight: 700; margin-top: 8px;">1,245</p>
+            <section class="stats-grid">
+                <div class="card chart-container">
+                    <p style="display: flex; justify-content: center;">Fees Payment by Form (%)</p>
+                    <canvas id="feesPaymentChart"></canvas>
                 </div>
+                <div class="card">
+                    <div class="stats-grid">
+                        <div class="card">
+                            <h3>Students</h3>
+                            <p style="font-size: 1.4rem; font-weight: 700; margin-top: 8px;">1,245</p>
+                        </div>
                 
-                <div class="card">
-                    <h3>Balances</h3>
-                    <p style="font-size: 1.4rem; font-weight: 700; margin-top: 8px; color: var(--error);">KES 45,150</p>
+                        <div class="card">
+                            <h3>Balances</h3>
+                            <p style="font-size: 1.4rem; font-weight: 700; margin-top: 8px; color: var(--error);">KES 45,150</p>
+                        </div>
+                        <div class="card">
+                            <h3>Collections</h3>
+                            <p style="font-size: 1.4rem; font-weight: 700; margin-top: 8px; color: var(--success);">KES 12,800</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="card">
-                    <h3>Payments Today</h3>
-                    <p style="font-size: 1.4rem; font-weight: 700; margin-top: 8px; color: var(--success);">KES 12,800</p>
-                </div>
-            </div>
+            </section>
+
+            
+
+
+
+
+
+
+
+            
 
             <div class="card" style="margin-top: 40px;">
                 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
@@ -68,10 +86,90 @@
             </div>
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script src="js/script.js"></script>
     <!-- Activate Lucide Icons -->
     <script>
     lucide.createIcons();
     </script>
+    <script>
+        const getCssVariable = (variable) => getComputedStyle(document.documentElement).getPropertyValue(variable).trim();
+        const ctx = document.getElementById('feesPaymentChart').getContext('2d');
+
+        // === CHART DATA ===
+        const chartData = {
+            labels: ['Form 1', 'Form 2', 'Form 3', 'Form 4'],
+            datasets: [{
+                label: 'Fees Paid (%)',
+                data: [85, 60, 95, 45],
+                backgroundColor: getCssVariable('--primary-blue-light'),
+                borderRadius: {
+                    topLeft: 8,
+                    topRight: 8,
+                    bottomLeft: 0,
+                    bottomRight: 0,
+                },
+
+                // ===================================================================
+                // == BAR WIDTH UPDATE: THIS IS WHERE THE CHANGE WAS MADE           ==
+                // ===================================================================
+                // To set a fixed width in pixels for each bar, use 'barThickness'.
+                // This gives you precise control over the bar's appearance.
+                // It overrides the proportional settings like 'barPercentage'.
+                barThickness: 10,
+                
+            }]
+        };
+
+        // === CHART CONFIGURATION ===
+        const chartConfig = {
+            type: 'bar',
+            data: chartData,
+            options: {
+                responsive: true,
+                maintainAspectRatio: false, 
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: {
+                            color: getCssVariable('--gray-200'),
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            callback: (value) => value + '%',
+                            color: getCssVariable('--text-muted'),
+                            font: { family: 'Inter' }
+                        }
+                    },
+                    x: {
+                        grid: { display: false },
+                        ticks: {
+                           color: getCssVariable('--text-muted'),
+                           font: { family: 'Inter', size: 14 }
+                        }
+                    }
+                },
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: getCssVariable('--dark-800'),
+                        titleFont: { family: 'Inter', size: 14, weight: 'bold' },
+                        bodyFont: { family: 'Inter', size: 12 },
+                        padding: 12,
+                        cornerRadius: 6,
+                        displayColors: false,
+                        callbacks: {
+                            label: (context) => `${context.dataset.label || ''}: ${context.parsed.y}%`
+                        }
+                    }
+                }
+            }
+        };
+
+        const feesPaymentChart = new Chart(ctx, chartConfig);
+    </script>
+
 </body>
 </html>
