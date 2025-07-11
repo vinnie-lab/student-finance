@@ -1,7 +1,6 @@
 /* style.css */
 
-/* --- 1. FONT & ROOT VARIABLES --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
 :root {
     /* Color Palette (Unchanged) */
@@ -20,6 +19,7 @@
     --success: #10B981;
     --warning: #F59E0B;
     --error: #EF4444;
+    --error-dark: #942f2f;
     --info: #3B82F6;
 
     /* Sizing & Transitions */
@@ -38,7 +38,7 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
     background-color: var(--gray-50);
     color: var(--text-dark);
     font-size: var(--font-size-body);
@@ -162,6 +162,11 @@ body.sidebar-collapsed .sidebar {
 .btn { padding: 10px 16px; border-radius: 6px; border: none; font-weight: 600; cursor: pointer; text-decoration: none; display: inline-flex; align-items: center; gap: 8px; transition: all var(--transition-speed) ease; }
 .btn-primary { background-color: var(--primary-blue); color: var(--white); }
 .btn-primary:hover { background-color: var(--primary-blue-dark); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2); }
+
+.btn-danger { background-color: var(--error); color: var(--white); }
+.btn-danger:hover { background-color: var(--error-dark); transform: translateY(-2px); box-shadow: 0 4px 10px rgba(30, 58, 138, 0.2); }
+
+
 .btn-secondary { background-color: var(--gray-100); color: var(--text-dark); border: 1px solid var(--gray-200); }
 .btn-secondary:hover { background-color: var(--gray-200); }
 .data-table { width: 100%; border-collapse: collapse; margin-top: 24px; }
@@ -261,17 +266,45 @@ input:focus{
 }
 
 .student-info img{
-    height: 10rem;
-    width: 10rem;
+    height: 200px;
+    width: 200px;
     border-radius: 50%;
 }
 .flex{
     display: flex;
     grid-area: 1rem;
+    gap:1rem;
 }
 .pending-balance-text{
-    font-size: 1.4rem; 
-    font-weight: 700; 
+    font-size: 1rem; 
     margin-top: 8px; 
     color: var(--error);
+}
+
+.text-muted{
+    color:var(--text-muted)
+}
+
+.text-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchResult {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.5s ease, opacity 0.5s ease;
+}
+
+/* When active (shown) */
+#searchResult.show {
+    max-height: 500px; /* Adjust based on expected content */
+    opacity: 1;
+}
+.search-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1rem;
 }

@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - Student Finance</title>
+     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
 
@@ -65,27 +69,38 @@
             <section class="card" style="margin-top: 1rem;">
                 <div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px;">
                     <h2>Search Student</h2>
-                    <form action="">
+                    <form action="" id="searchForm">
                         <input  class ="" type="number" name="admissionNumber" id="admissionNumber" placeholder="Search By Adm">
-                        <button type="submit" href="invoices.html" class="btn btn-secondary">Search</button>
+                        <button type="submit" class="btn btn-secondary">Search</button>
                     </form>
                 </div>
-            
-                <div class="card" style="margin-top: 40px;">
-                    
-                    <div class="stats-grid student-info">
-                        <div class="flex">
-                            <div> <img src="img/profile.png" alt="" srcset=""></div>
-                                <div>
-                                    <p>
-                                    Name : <strong>Vincent Amonde</strong><br>
-                                    Form : <strong>4 - Yellow</strong><br>
-                                    Fee Balance : <strong class = "pending-balance-text">Ksh. 35, 000</strong>
-                                </p>
-                                </div>
-                            </div>
+                         
+                <div class=" student-info" id="searchResult" style='margin-top:1rem'>
+                    <div class=" card search-grid">
+                        <div> <img src="img/profile.png" alt="" srcset=""></div>
+                        <div class="">
+                            <p class="text-muted">
+                                Name : <strong>Vincent Amonde</strong><br>
+                                Form : <strong>4 - Yellow</strong><br>
+                                Fee Balance : <strong class = "pending-balance-text">Ksh. 35, 000</strong>
+                            </p>
+                            <p class="flex">
+                                <button class="btn btn-primary" style="margin-top: 1rem;">Grant Scholarship</button>
+                                <button class="btn btn-danger" style="margin-top: 1rem;">Send Reminder</button>
+                            </p>
                         </div>
+
+                        <div class="">
+                            <p class="text-muted">
+                                Parent : <strong>Melda Amonde</strong><br>
+                                Relationship : <strong>Mother</strong><br>
+                               
+                            </p>
+                            
+                        </div>
+                        
                     </div>
+                </div>
                 </div>
             </section>
         </main>
@@ -165,6 +180,15 @@
 
     const feesPaymentChart = new Chart(ctx, chartConfig);
 </script>
+
+<script>
+document.getElementById('searchForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // prevent form from submitting
+    const resultBox = document.getElementById('searchResult');
+    resultBox.classList.add('show');
+});
+</script>
+
 
 
 </body>
